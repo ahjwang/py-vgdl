@@ -64,11 +64,9 @@ class NotableSpritesObserver(StateObserver):
 
                 resources = [ float(s.resources[r]) for r in resource_types ]
 
-                state += [
-                    (s.id + '.position', position),
-                    (s.id + '.orientation', orientation),
-                    (s.id + '.class', class_one_hot),
-                    (s.id + '.resources', resources),
-                ]
+                sprite_data = {'position': position, 'orientation': orientation,
+                    'class': class_one_hot, 'resources': resources}
+
+                state += [(s.id, sprite_data)]
 
         return KeyValueObservation(state)

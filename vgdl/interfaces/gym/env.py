@@ -97,7 +97,7 @@ class VGDLEnv(gym.Env):
         if self._obs_type == 'image':
             return self.renderer.get_image()
         else:
-            return self.observer.get_observation().as_array()
+            return self.observer.get_observation().as_dict()
 
     def step(self, a):
         # if not self.mode_initialised:
