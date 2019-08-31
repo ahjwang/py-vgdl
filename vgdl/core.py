@@ -564,7 +564,7 @@ class BasicGameLevel:
     This regroups all the components of a game's dynamics, after parsing.
     """
 
-    def __init__(self, domain: BasicGame, sprite_registry, levelstring, width, height, seed=0, title=None):
+    def __init__(self, domain: BasicGame, sprite_registry, levelstring, width, height, seed=None, title=None):
         self.domain = domain
         self.sprite_registry = sprite_registry
         self.levelstring = levelstring
