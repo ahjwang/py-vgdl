@@ -453,6 +453,8 @@ class BasicGame:
         self.block_size = block_size
 
         for name, value in kwargs.items():
+            if name == 'notable_sprites':
+                continue
             print("WARNING: undefined parameter '%s' for game! " % (name))
 
         self.notable_resources: List[str] = []
